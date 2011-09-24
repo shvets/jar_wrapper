@@ -22,7 +22,7 @@ class JarWrapper
     command.push(*java_args)
     # command.push("-Xbootclasspath/a:#{jruby_complete}")
     # command.push("-Dfile.encoding=UTF8", "-Xmx320m", "-Xss1024k", "-Djruby.memory.max=320m", "-Djruby.stack.max=1024k", "org.jruby.Main")
-    command.push(*java_opts) if java_opts.length > 0
+    command.push(*java_opts) if !java_opts.nil?
 
     command.push("-jar", jar_file) if jar_file
     command.push("-cp", classpath, main_class) if main_class
