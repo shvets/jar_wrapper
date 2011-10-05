@@ -1,5 +1,8 @@
 require 'open-uri'
 
+# some code is extracted from redcar project (https://github.com/redcar/redcar) which is in turn extracted 
+# from ruby-processing gem (https://github.com/jashkenas/ruby-processing).
+
 class JarWrapper
   attr_accessor :main_class, :classpath, :jar_file, :java_opts
 
