@@ -8,3 +8,11 @@ require 'net/http'
 
 require 'jar_wrapper/runner'
 
+require 'rbconfig'
+
+def windows?
+  !!(RbConfig::CONFIG['host_os'] =~ /mswin|mingw|windows/)
+end
+
+windows? ? (require "zip/zipfilesystem") : (require 'zip/zip')
+

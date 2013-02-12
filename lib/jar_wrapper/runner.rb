@@ -1,13 +1,5 @@
 require 'open-uri'
 
-require 'rbconfig'
-
-def windows?
-  !!(RbConfig::CONFIG['host_os'] =~ /mswin|mingw|windows/)
-end
-
-windows? ? (require "zip/zipfilesystem") : (require 'zip/zip')
-
 # some code is extracted from redcar project (https://github.com/redcar/redcar) which is in turn extracted 
 # from ruby-processing gem (https://github.com/jashkenas/ruby-processing).
 

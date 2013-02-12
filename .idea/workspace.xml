@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGES" afterPath="$PROJECT_DIR$/CHANGES" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jar_wrapper.rb" afterPath="$PROJECT_DIR$/lib/jar_wrapper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jar_wrapper/runner.rb" afterPath="$PROJECT_DIR$/lib/jar_wrapper/runner.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jar_wrapper/version.rb" afterPath="$PROJECT_DIR$/lib/jar_wrapper/version.rb" />
@@ -20,12 +19,12 @@
     <file path="/Gemfile" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708618323" ignored="false" />
     <file path="/a.dummy" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708108504" ignored="false" />
     <file path="/jar_wrapper.gemspec" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708115815" ignored="false" />
-    <file path="$PROJECT_DIR$/../selenium/Gemfile" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708637301" ignored="false" />
-    <file path="$PROJECT_DIR$/../selenium/Gemfile.lock" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708642523" ignored="false" />
+    <file path="$PROJECT_DIR$/../selenium/Gemfile" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360709193908" ignored="false" />
+    <file path="$PROJECT_DIR$/../selenium/Gemfile.lock" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360709197266" ignored="false" />
     <file path="$PROJECT_DIR$/../selenium/bin/selenium" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708658751" ignored="false" />
-    <file path="$PROJECT_DIR$/../selenium/lib/selenium/starter.rb" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708758156" ignored="false" />
+    <file path="$PROJECT_DIR$/../selenium/lib/selenium/starter.rb" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360709166995" ignored="false" />
     <file path="/starter.rb" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708757006" ignored="false" />
-    <file path="$PROJECT_DIR$/../selenium/selenium.gemspec" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360708813635" ignored="false" />
+    <file path="$PROJECT_DIR$/../selenium/selenium.gemspec" changelist="f2d45c82-3b69-4bf8-9eb4-252420ccdf4d" time="1360709285538" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="18" selection-end="113" vertical-scroll-proportion="0.0">
+            <state line="9" column="8" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -54,7 +53,16 @@
       <file leaf-file-name="jar_wrapper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/jar_wrapper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+            <state line="17" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/jar_wrapper/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="36" selection-end="36" vertical-scroll-proportion="0.023323616">
               <folding />
             </state>
           </provider>
@@ -63,25 +71,16 @@
       <file leaf-file-name="runner.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/jar_wrapper/runner.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/jar_wrapper/version.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="18" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CHANGES" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CHANGES" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CHANGES">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="123" selection-end="155" vertical-scroll-proportion="0.303207">
+            <state line="7" column="22" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,10 +110,10 @@
         <option value="$PROJECT_DIR$/jar_wrapper.gemspec" />
         <option value="$PROJECT_DIR$/jar_wrapper.gemspec.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/lib/jar_wrapper.rb" />
-        <option value="$PROJECT_DIR$/lib/jar_wrapper/runner.rb" />
-        <option value="$PROJECT_DIR$/lib/jar_wrapper/version.rb" />
         <option value="$PROJECT_DIR$/CHANGES" />
+        <option value="$PROJECT_DIR$/lib/jar_wrapper/runner.rb" />
+        <option value="$PROJECT_DIR$/lib/jar_wrapper.rb" />
+        <option value="$PROJECT_DIR$/lib/jar_wrapper/version.rb" />
       </list>
     </option>
   </component>
@@ -420,37 +419,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/CHANGES">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="18" selection-end="113" vertical-scroll-proportion="0.0">
+        <state line="7" column="22" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jar_wrapper.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="9" column="8" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/jar_wrapper/runner.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jar_wrapper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/jar_wrapper/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGES">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="123" selection-end="155" vertical-scroll-proportion="0.303207">
+        <state line="1" column="18" selection-start="36" selection-end="36" vertical-scroll-proportion="0.023323616">
           <folding />
         </state>
       </provider>
