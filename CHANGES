@@ -8,3 +8,8 @@
 == Version 0.1.2
 
 * Adding licence.
+
+== Version 0.1.3
+
+* Removing jeweler.
+* Bug fixes.

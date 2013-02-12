@@ -1,54 +1,37 @@
-# Rakefile for winstone
+#!/usr/bin/env rake
 
-task :default => :gemspec
+$LOAD_PATH.unshift File.expand_path("lib", File.dirname(__FILE__))
 
-begin
-  require 'bundler'
-  
-  begin
-    require 'jeweler'
-    
-    Jeweler::Tasks.new do |gemspec|
-      gemspec.name = "jar_wrapper"
-      gemspec.summary = "Jar wrapper for executable java jar (Summary)."
-      gemspec.description = "Jar wrapper for executable java jar."
-      gemspec.email = "alexander.shvets@gmail.com"
-      gemspec.homepage = "http://github.com/shvets/jar_wrapper"
-      gemspec.authors = ["Alexander Shvets"]
-      gemspec.files = FileList["CHANGES", "jar_wrapper.gemspec", "Rakefile", "README", "VERSION",
-                               "lib/**/*", "bin/**/*"] 
-      gemspec.requirements = ["none"]
-      gemspec.bindir = "bin"
-    
-      gemspec.add_bundler_dependencies
-    end
-  rescue LoadError
-    puts "Jeweler not available. Install it s with: [sudo] gem install jeweler"
-  end
-rescue LoadError
-  puts "Bundler not available. Install it s with: [sudo] gem install bundler"
+require "rspec/core/rake_task"
+require "jar_wrapper/version"
+require "gemspec_deps_gen/gemspec_deps_gen"
+
+def version
+  JarWrapper::VERSION
 end
 
-
-desc "Release the gem"
-task :"release:gem" do
-  %x(
-      rake gemspec
-      rake build
-      rake install
-      git add .  
-  )  
-  puts "Commit message:"  
-  message = STDIN.gets
-
-  version = "#{File.open(File::dirname(__FILE__) + "/VERSION").readlines().first}"
-
-  %x(
-    git commit -m "#{message}"
-    
-    git push origin master
-
-    gem push pkg/jar_wrapper-#{version}.gem      
-  )
+def project_name
+  File.basename(Dir.pwd)
 end
 
+task :build do
+  system "rm #{project_name}.gemspec"
+  generator = GemspecDepsGen.new
+
+  generator.generate_dependencies "#{project_name}.gemspec.erb", "#{project_name}.gemspec"
+
+  system "gem build #{project_name}.gemspec"
+end
+
+task :install do
+  system "gem install #{project_name}-#{version}.gem"
+end
+
+task :release => :build do
+  system "gem push #{project_name}-#{version}.gem"
+end
+
+RSpec::Core::RakeTask.new do |task|
+  task.pattern = 'spec/**/*_spec.rb'
+  task.verbose = false
+end
