@@ -3,7 +3,7 @@ source :rubygems
 require 'rbconfig'
 
 def windows?
-  !!(Config::CONFIG['host_os'] =~ /mswin|mingw|windows/)
+  !!(RbConfig::CONFIG['host_os'] =~ /mswin|mingw|windows/)
 end
 
 gem "zip"
