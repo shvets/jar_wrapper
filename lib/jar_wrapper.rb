@@ -6,9 +6,5 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'fileutils'
 require 'net/http'
 
-require 'jar_wrapper/jar_wrapper'
+require 'jar_wrapper/runner'
 
-require 'rbconfig'
-WINDOZE = Config::CONFIG['host_os'] =~ /mswin|mingw|windows/
-
-WINDOZE ? (require "zip/zipfilesystem") : (require 'zip/zip')
