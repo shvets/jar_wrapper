@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" project-jdk-name="RVM: ruby-1.9.3-p385 [selenium]" project-jdk-type="RUBY_SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="RVM: ruby-1.9.3-p385 [jar_wrapper]" project-jdk-type="RUBY_SDK" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />

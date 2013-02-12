@@ -6,7 +6,6 @@ def windows?
   !!(Config::CONFIG['host_os'] =~ /mswin|mingw|windows/)
 end
 
-gem 'jeweler'
 gem "zip"
 gem "rubyzip" if windows?
 
