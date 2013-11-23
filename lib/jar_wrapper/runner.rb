@@ -1,4 +1,6 @@
+require 'fileutils'
 require 'open-uri'
+require 'rbconfig'
 
 # some code is extracted from redcar project (https://github.com/redcar/redcar) which is in turn extracted 
 # from ruby-processing gem (https://github.com/jashkenas/ruby-processing).
@@ -6,6 +8,10 @@ require 'open-uri'
 module JarWrapper
   class Runner
     attr_accessor :main_class, :classpath, :jar_file, :java_opts
+
+    def initialize
+      windows? ? (require "zip/zipfilesystem") : (require 'zip/zip')
+    end
 
     def install source, destination
       download_file_to(source, destination)
@@ -21,12 +27,16 @@ module JarWrapper
 
     private
 
+    def windows?
+      !!(RbConfig::CONFIG['host_os'] =~ /mswin|mingw|windows/)
+    end
+
     def construct_command(args="")
       command = ["java"]
       command.push(*java_args)
       # command.push("-Xbootclasspath/a:#{jruby_complete}")
       # command.push("-Dfile.encoding=UTF8", "-Xmx320m", "-Xss1024k", "-Djruby.memory.max=320m", "-Djruby.stack.max=1024k", "org.jruby.Main")
-      command.push(*java_opts) if not (java_opts.nil? or java_opts.length == 0)
+      command.push(*java_opts) unless java_opts.nil? or java_opts.length == 0
 
       command.push("-jar", jar_file) if jar_file
       command.push("-cp", classpath, main_class) if main_class
@@ -91,6 +101,8 @@ module JarWrapper
           :windows
         when /linux/
           :linux
+        else
+          # type code here
       end
     end
 
@@ -113,7 +125,7 @@ module JarWrapper
         open(uri) do |in_file|
           done = false
 
-          while (!done) do
+          until done do
             buffer = in_file.read(1024*1000)
             out_file.write(buffer)
 
@@ -148,6 +160,7 @@ module JarWrapper
             begin
               entry.extract
             rescue Zip::ZipDestinationFileExistsError
+              # ignored
             end
           end
         end

@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     diff-lcs (1.1.3)
     file_utils (1.0.6)
@@ -20,6 +20,7 @@ GEM
     zip (2.0.2)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES

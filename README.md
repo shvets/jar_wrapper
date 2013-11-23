@@ -1,4 +1,4 @@
-# Jar Wrapper -- Jar wrapper for executable java jarjava jar
+# Jar Wrapper - wrapper for executable java jar files
 
 ## Installing Jar Wrapper
 
@@ -6,25 +6,26 @@
 
 ## Usage
 
+```ruby
 require 'jar_wrapper'
 
 wrapper = JarWrapper::Runner.new
 wrapper.java_opts = ["-Xmx1024m", "-Xss1024k" ]
 
-1. install jar file from source URL into target file:
+# install jar file from source URL into target file:
 
 wrapper.install source, target
 
-2. execute jar file (java -jar jar_file):
+# execute jar file (java -jar jar_file.jar):
 
-wrapper.jar_file = jar_file
-wrapper.run ARGV
+wrapper.jar_file = "jar_file.jar"
+wrapper.run
 
-3. execute main class (java -cp ... main_class):
+# execute main class (java -cp some_class_path main_class):
 
-wrapper.classpath = some_class_path
-wrapper.main_class = main_class
-wrapper.run ARGV
-
+wrapper.classpath = "some_class_path"
+wrapper.main_class = "main_class"
+wrapper.run
+```
 
       
